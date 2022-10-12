@@ -2,15 +2,31 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 
-export const Navbar = (props) => {
+// export const Navbar = (props) => {
+// 	return (
+// 		<View style={styles.navbar}>
+// 			<Text style={styles.text}>{props.title}</Text>
+// 		</View>
+// 	);
+// }
+export const Navbar = ({title}) => {
 	return (
 		<View style={styles.navbar}>
-			<Text style={styles.text}>Todo App</Text>
+			<Text style={styles.text}>{title}</Text>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
-	navbar: {},
-	text: {},
+	navbar: {
+		height: 80,
+		backgroundColor: "#3949ab",
+		alignItems: 'center',
+		justifyContent: 'flex-end',
+		paddingBottom: 15
+	},
+	text: {
+		color: '#fff',
+		fontSize: 18
+	},
 });
