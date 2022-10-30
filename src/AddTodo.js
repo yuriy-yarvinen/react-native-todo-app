@@ -23,7 +23,7 @@ export const AddTodo = ({ onSubmit }) => {
 			onChangeText={setValue} 
 			// onChangeText={text => setValue(text)} 
 			value={value} 
-			placeholder="Введите название дела" 
+			placeholder="Введите название дела..." 
 			autoCorrect={false}
 			autoCapitalize="none"
 			/>
