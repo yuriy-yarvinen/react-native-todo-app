@@ -31,6 +31,10 @@ export default function App() {
     ])
   }
 
+  const removeToDo = id => {
+    setTodos(prev => prev.filter(todo => todo.id !== id))
+  }
+
   return (
     <View style={styles.container}>
       <Navbar title="Todo App" />
@@ -40,7 +44,7 @@ export default function App() {
         <FlatList
           keyExtractor={item => item.id}
           data={todos}
-          renderItem={({ item }) => <Todo todo={item} /> }
+          renderItem={({ item }) => <Todo todo={item} onRemove={removeToDo} /> }
         />
         {/* <ScrollView>
           {todos.map(todo => {
